@@ -1,3 +1,6 @@
 # Octagon-HD-Style-Dark
-Fix Software Manager
-Fix Eight Panel
++New Converter und Renderer
++Fix Software Manager
++Fix Eight Panel
+Skinned Yahoo Weather
+Software Management Window in size conformist
