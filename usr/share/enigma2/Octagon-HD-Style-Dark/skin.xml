@@ -256,16 +256,6 @@
     <widget source="session.CurrentService" render="Label" position="72,658" size="60,30" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" valign="center">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1146,122" size="80,80" zPosition="3" foregroundColor="darkgrey" alphatest="blend">
-      <convert type="AnalogClockOCT">minHand</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1158,135" size="55,55" zPosition="2" foregroundColor="darkgrey" alphatest="blend">
-      <convert type="AnalogClockOCT">hourHand</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1146,122" size="80,80" zPosition="4" alphatest="blend" transparent="1" foregroundColor="red">
-      <convert type="AnalogClockOCT">secHand</convert>
-    </widget>
-    <ePixmap position="1078,73" size="198,189" pixmap="Octagon-HD-Style-Dark/menu/oct_clock.png" zPosition="-1" />
   </screen>
   <!-- Infobar */-->
   <!--SecondInfoBar  */-->
