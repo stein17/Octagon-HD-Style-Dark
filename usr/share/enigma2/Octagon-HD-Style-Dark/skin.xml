@@ -190,83 +190,73 @@
   </windowstyle>
   <!-- Infobar */-->
   <screen name="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" borderWidth="0" borderColor="transparent">
-    <ePixmap pixmap="Octagon-HD-Style-Dark/menu/Octagon_Infobar.png" position="0,0" zPosition="-1" size="1280,720" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_rec_on.png" position="901,609" render="Pixmap" size="45,23" source="session.RecordState" zPosition="5">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="1151,597" size="110,50" font="Regular; 36" halign="center" backgroundColor="metrixBackground" transparent="1" foregroundColor="cyan1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.CurrentService" render="OE_XPiconOCT" position="133,580" size="220,132" zPosition="4" transparent="0" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="360,606" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" transparent="1" valign="top">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="956,606" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" transparent="1" valign="top">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="447,606" size="460,30" font="Regular; 24" halign="left" backgroundColor="darkgrey" foregroundColor="white" transparent="1" zPosition="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="1018,606" size="103,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Dark/progress.png" position="370,644" size="750,8" zPosition="7" transparent="1">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="447,658" size="460,30" font="Regular; 24" halign="left" backgroundColor="darkgrey" transparent="1" valign="top">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="1018,658" size="103,30" font="Regular; 20" halign="right" backgroundColor="darkgrey" transparent="1">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <!-- TunerInfo */-->
-    <widget source="session.Event_Next" render="Label" position="360,658" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" foregroundColor="white" transparent="1" noWrap="1" zPosition="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="956,658" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" foregroundColor="white" transparent="1" noWrap="1" zPosition="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <!-- Digitalclock  */-->
-    <widget source="global.CurrentTime" render="Label" position="1130,664" size="150,30" font="Regular; 24" halign="center" backgroundColor="metrixBackground" transparent="1" zPosition="0" foregroundColor="cyan1">
-      <convert type="ClockToText">Format:%A</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="1130,637" size="150,30" font="Regular; 24" halign="center" backgroundColor="metrixBackground" foregroundColor="cyan1" transparent="1" zPosition="0">
-      <convert type="ClockToText">Format:%d.%b.%Y</convert>
-    </widget>
-    <!-- Digitalclock  */-->
-    <eLabel text="SNR :" position="5,605" size="65,30" halign="right" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="center" foregroundColor="metrixGreen" />
-    <widget source="session.FrontendStatus" render="Label" position="73,608" size="55,30" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" halign="left" foregroundColor="metrixGreen">
-      <convert type="FrontendInfoOCT">SNR</convert>
-    </widget>
-    <widget source="session.FrontendStatus" render="Progress" position="16,642" size="100,5" zPosition="20" pixmap="Octagon-HD-Style-Dark/snr1.png" transparent="1" borderWidth="1" borderColor="un303030">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="-2,658" size="60,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1" valign="center">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" position="58,658" size="15,30" font="Regular; 20" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" />
-    <widget source="session.CurrentService" render="Label" position="72,658" size="60,30" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" valign="center">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1146,122" size="80,80" zPosition="3" foregroundColor="darkgrey" alphatest="blend">
-      <convert type="AnalogClockOCT">minHand</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1158,135" size="55,55" zPosition="2" foregroundColor="darkgrey" alphatest="blend">
-      <convert type="AnalogClockOCT">hourHand</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="WatchesOCT" position="1146,122" size="80,80" zPosition="4" alphatest="blend" transparent="1" foregroundColor="red">
-      <convert type="AnalogClockOCT">secHand</convert>
-    </widget>
-    <ePixmap position="1078,73" size="198,189" pixmap="Octagon-HD-Style-Dark/menu/oct_clock.png" zPosition="-1" />
-  </screen>
+  <ePixmap pixmap="Octagon-HD-Style-Dark/menu/Octagon_Infobar.png" position="0,0" zPosition="-1" size="1280,720" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_rec_on.png" position="901,609" render="Pixmap" size="45,23" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1151,597" size="110,50" font="Regular; 36" halign="center" backgroundColor="metrixBackground" transparent="1" foregroundColor="cyan1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.CurrentService" render="OE_XPiconOCT" position="133,580" size="220,132" zPosition="4" transparent="0" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="360,606" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" transparent="1" valign="top">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="956,606" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" transparent="1" valign="top">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="447,606" size="460,30" font="Regular; 24" halign="left" backgroundColor="darkgrey" foregroundColor="white" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1018,606" size="103,30" font="Regular; 22" halign="right" backgroundColor="darkgrey" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Dark/progress.png" position="370,644" size="750,8" zPosition="7" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="447,658" size="460,30" font="Regular; 24" halign="left" backgroundColor="darkgrey" transparent="1" valign="top">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1018,658" size="103,30" font="Regular; 20" halign="right" backgroundColor="darkgrey" transparent="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <!-- TunerInfo */-->
+  <widget source="session.Event_Next" render="Label" position="360,658" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" foregroundColor="white" transparent="1" noWrap="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="956,658" size="75,30" font="Regular; 22" halign="center" backgroundColor="darkgrey" foregroundColor="white" transparent="1" noWrap="1" zPosition="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <!-- Digitalclock  */-->
+  <widget source="global.CurrentTime" render="Label" position="1130,664" size="150,30" font="Regular; 24" halign="center" backgroundColor="metrixBackground" transparent="1" zPosition="0" foregroundColor="cyan1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1130,637" size="150,30" font="Regular; 24" halign="center" backgroundColor="metrixBackground" foregroundColor="cyan1" transparent="1" zPosition="0">
+    <convert type="ClockToText">Format:%d.%b.%Y</convert>
+  </widget>
+  <!-- Digitalclock  */-->
+  <eLabel text="SNR :" position="5,605" size="65,30" halign="right" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="center" foregroundColor="metrixGreen" />
+  <widget source="session.FrontendStatus" render="Label" position="73,608" size="55,30" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" halign="left" foregroundColor="metrixGreen">
+    <convert type="FrontendInfoOCT">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Progress" position="16,642" size="100,5" zPosition="20" pixmap="Octagon-HD-Style-Dark/snr1.png" transparent="1" borderWidth="1" borderColor="un303030">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="-2,658" size="60,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1" valign="center">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="58,658" size="15,30" font="Regular; 20" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" />
+  <widget source="session.CurrentService" render="Label" position="72,658" size="60,30" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" valign="center">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+</screen>
   <!-- Infobar */-->
   <!--SecondInfoBar  */-->
   <!--SecondInfobar with MSN Weater-->
@@ -4674,35 +4664,35 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
   </screen>
   <screen name="NetworkWizard" position="50,60" size="1000,660" title="Welcome...">
-  <widget source="global.CurrentTime" render="Label" position="898,2" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="547,1" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
-    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel text="NetworkWizard" position="2,-1" size="800,43" font="Regular;35" backgroundColor="metrixBackground" transparent="1" />
-  <widget name="rc" position="7,77" size="127,500" pixmaps="Octagon-HD-Style-Dark/skin_default/rc.png,Octagon-HD-Style-Dark/skin_default/rcold.png" zPosition="10" alphatest="blend" backgroundColor="metrixBackground" />
-  <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-  <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-  <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-  <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-  <widget name="wizard" position="138,75" size="310,385" pixmap="Octagon-HD-Style-Dark/skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="259,480" size="12,24" alphatest="blend" />
-  <widget name="languagetext" position="285,480" size="150,23" font="Regular;21" backgroundColor="metrixBackground" transparent="1" />
-  <widget name="text" position="455,50" size="540,240" font="Regular;22" backgroundColor="metrixBackground" transparent="1" />
-  <widget source="list" render="Listbox" position="455,305" size="540,350" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-    <convert type="TemplatedMultiContent">
+    <widget source="global.CurrentTime" render="Label" position="898,2" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="547,1" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="NetworkWizard" position="2,-1" size="800,43" font="Regular;35" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="rc" position="7,77" size="127,500" pixmaps="Octagon-HD-Style-Dark/skin_default/rc.png,Octagon-HD-Style-Dark/skin_default/rcold.png" zPosition="10" alphatest="blend" backgroundColor="metrixBackground" />
+    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="wizard" position="138,75" size="310,385" pixmap="Octagon-HD-Style-Dark/skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="259,480" size="12,24" alphatest="blend" />
+    <widget name="languagetext" position="285,480" size="150,23" font="Regular;21" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text" position="455,50" size="540,240" font="Regular;22" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="455,305" size="540,350" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 30
 				}
 			</convert>
-  </widget>
-<eLabel text="Virtuelle Tastatur" position="238,620" size="180,24" font="Regular;20" backgroundColor="metrixBackground" transparent="1" />
-  <widget name="config" position="454,304" size="540,350" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
-  <widget name="HelpWindow" position="120,470" size="1,1" zPosition="1" transparent="1" alphatest="blend" />
-<ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt.png" position="176,617" size="42,29" zPosition="1" alphatest="blend" />
-</screen>
+    </widget>
+    <eLabel text="Virtuelle Tastatur" position="238,620" size="180,24" font="Regular;20" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="454,304" size="540,350" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="120,470" size="1,1" zPosition="1" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt.png" position="176,617" size="42,29" zPosition="1" alphatest="blend" />
+  </screen>
   <screen name="StartWizard" position="50,60" size="1000,580" title="Welcome...">
     <widget source="global.CurrentTime" render="Label" position="898,1" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Default</convert>
