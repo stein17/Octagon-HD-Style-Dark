@@ -4673,34 +4673,36 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
   </screen>
-  <screen name="NetworkWizard" position="50,60" size="1000,580" title="Welcome...">
-    <widget source="global.CurrentTime" render="Label" position="898,2" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="547,1" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <eLabel text="NetworkWizard" position="2,-1" size="800,43" font="Regular;35" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="rc" position="7,63" size="127,500" pixmaps="Octagon-HD-Style-Dark/skin_default/rc.png,Octagon-HD-Style-Dark/skin_default/rcold.png" zPosition="10" alphatest="blend" backgroundColor="metrixBackground" />
-    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="134,35" size="310,385" pixmap="Octagon-HD-Style-Dark/skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="458,370" size="12,24" alphatest="blend" />
-    <widget name="languagetext" position="482,370" size="150,23" font="Regular;21" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="text" position="455,50" size="540,300" font="Regular;22" backgroundColor="metrixBackground" transparent="1" />
-    <widget source="list" render="Listbox" position="300,419" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <screen name="NetworkWizard" position="50,60" size="1000,660" title="Welcome...">
+  <widget source="global.CurrentTime" render="Label" position="898,2" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="547,1" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <eLabel text="NetworkWizard" position="2,-1" size="800,43" font="Regular;35" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="rc" position="7,77" size="127,500" pixmaps="Octagon-HD-Style-Dark/skin_default/rc.png,Octagon-HD-Style-Dark/skin_default/rcold.png" zPosition="10" alphatest="blend" backgroundColor="metrixBackground" />
+  <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+  <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+  <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+  <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+  <widget name="wizard" position="138,75" size="310,385" pixmap="Octagon-HD-Style-Dark/skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="259,480" size="12,24" alphatest="blend" />
+  <widget name="languagetext" position="285,480" size="150,23" font="Regular;21" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="text" position="455,50" size="540,240" font="Regular;22" backgroundColor="metrixBackground" transparent="1" />
+  <widget source="list" render="Listbox" position="455,305" size="540,350" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 30
 				}
 			</convert>
-    </widget>
-    <widget name="config" position="300,419" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="HelpWindow" position="120,470" size="1,1" zPosition="1" transparent="1" alphatest="blend" />
-  </screen>
+  </widget>
+<eLabel text="Virtuelle Tastatur" position="238,620" size="180,24" font="Regular;20" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="config" position="454,304" size="540,350" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
+  <widget name="HelpWindow" position="120,470" size="1,1" zPosition="1" transparent="1" alphatest="blend" />
+<ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt.png" position="176,617" size="42,29" zPosition="1" alphatest="blend" />
+</screen>
   <screen name="StartWizard" position="50,60" size="1000,580" title="Welcome...">
     <widget source="global.CurrentTime" render="Label" position="898,1" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Default</convert>
@@ -5349,12 +5351,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="DNS1" render="Label" position="320,530" size="210,24" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget source="DNS2" render="Label" position="320,560" size="210,24" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="38,685" size="12,24" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_blue.png" position="312,685" size="12,24" alphatest="blend" />
-    <widget source="key_red" render="Label" position="60,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
-    <widget source="key_blue" render="Label" position="334,685" size="240,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="VKeyIcon" text="Text" position="631,681" size="70,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_blue.png" position="226,685" size="12,24" alphatest="blend" />
+    <widget source="key_red" render="Label" position="60,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="key_blue" render="Label" position="246,685" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="Virtuelle Tastatur" position="624,685" size="180,24" font="Regular;20" backgroundColor="metrixBackground" transparent="1" />
     <widget name="HelpWindow" position="120,460" size="1,1" transparent="1" alphatest="blend" />
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_menu.png" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt.png" position="573,684" size="42,29" zPosition="1" alphatest="blend" />
   </screen>
   <screen name="AdapterSetupConfiguration" position="50,0" size="800,720" title="" backgroundColor="metrixBackground" flags="wfNoBorder">
     <widget source="global.CurrentTime" render="Label" position="671,63" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
@@ -8674,33 +8677,33 @@ oder alle = Liste
     <widget name="logo" position="45,618" size="160,49" zPosition="3" alphatest="blend" />
   </screen>
   <!-- NumericalTextInputHelpDialog -->
-<screen name="NumericalTextInputHelpDialog" position="300,500" size="680,143" flags="wfNoBorder" zPosition="100" backgroundColor="background40">
-  
-  <widget name="key1" position="28,12" size="198,24" font="Console;24" halign="center" valign="center" />
-  <widget name="key2" position="252,12" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key3" position="475,12" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key4" position="28,44" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key5" position="252,44" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key6" position="475,44" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key7" position="28,76" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key8" position="252,76" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="key9" position="475,76" size="198,24" font="Console; 24" halign="center" valign="center" />
-  <widget name="help1" position="89,111" size="56,24" font="Console; 24" halign="center" valign="center" backgroundColor="metrixBackground" transparent="1" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <widget name="key0" position="252,111" size="198,24" font="Console; 19" halign="center" valign="center" />
-  <widget name="help2" position="540,111" size="56,24" font="Console; 24" halign="center" valign="center" backgroundColor="metrixBackground" transparent="1" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="1" position="6,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="2" position="231,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="3" position="454,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="4" position="6,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="5" position="231,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="6" position="454,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="7" position="6,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="8" position="231,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="9" position="454,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <eLabel text="0" position="231,111" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
-  <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,38" size="680,3" alphatest="blend" zPosition="1" />
-  <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,70" size="680,3" alphatest="blend" zPosition="1" />
-  <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,102" size="680,3" alphatest="blend" zPosition="1" />
-</screen>
+  <screen name="NumericalTextInputHelpDialog" position="300,500" size="680,143" flags="wfNoBorder" zPosition="100" backgroundColor="background40">
+    <widget name="key1" position="28,12" size="198,24" font="Console;24" halign="center" valign="center" />
+    <widget name="key2" position="252,12" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key3" position="475,12" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key4" position="28,44" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key5" position="252,44" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key6" position="475,44" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key7" position="28,76" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key8" position="252,76" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="key9" position="475,76" size="198,24" font="Console; 24" halign="center" valign="center" />
+    <widget name="help1" position="89,111" size="56,24" font="Console; 24" halign="center" valign="center" backgroundColor="metrixBackground" transparent="1" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <widget name="key0" position="252,111" size="198,24" font="Console; 19" halign="center" valign="center" />
+    <widget name="help2" position="540,111" size="56,24" font="Console; 24" halign="center" valign="center" backgroundColor="metrixBackground" transparent="1" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="1" position="6,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="2" position="231,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="3" position="454,15" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="4" position="6,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="5" position="231,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="6" position="454,47" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="7" position="6,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="top" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="8" position="231,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="9" position="454,79" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <eLabel text="0" position="231,111" size="20,24" font="Console; 24" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center" borderWidth="1" borderColor="white" zPosition="10" foregroundColor="meinrot" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,0" size="680,3" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,38" size="680,3" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,70" size="680,3" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/selection/Line 700x3.png" position="0,102" size="680,3" alphatest="blend" zPosition="1" />
+  </screen>
   <!-- End NumericalTextInputHelpDialog -->
 </skin>
