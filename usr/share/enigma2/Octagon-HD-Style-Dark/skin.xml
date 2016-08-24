@@ -195,8 +195,8 @@
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="1131,597" size="130,50" font="Regular; 36" halign="center" backgroundColor="metrixBackground" transparent="1" foregroundColor="cyan1">
-  <convert type="ClockToText">Format:%H:%M</convert>
-</widget>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
     <widget source="session.CurrentService" render="OE_XPiconOCT" position="133,580" size="220,132" zPosition="4" transparent="0" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
@@ -548,7 +548,7 @@
   <!-- ChannelSelection */-->
   <!-- ChannelSelection */-->
   <screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" backgroundColor="metrixBackground" flags="wfNoBorder" zPosition="-1">
-    <widget source="Service" render="OE_XPiconOCT" position="1041,516" size="220,132" transparent="1" zPosition="1" alphatest="blend">
+    <widget source="Service" render="OE_XPiconOCT" position="881,68" size="220,132" transparent="1" zPosition="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <eLabel text="EPG Selection" position="14,7" size="273,49" font="Regular; 28" backgroundColor="metrixBackground" transparent="1" valign="top" zPosition="1" />
@@ -556,14 +556,14 @@
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget name="list" position="25,114" size="686,530" zPosition="3" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" foregroundColor="white" enableWrapAround="1" transparent="1" />
-    <widget source="Event" render="Label" position="752,365" size="283,284" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="top" zPosition="1">
+    <widget source="Event" render="Label" position="760,221" size="496,422" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="top" zPosition="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="35,685" size="12,24" alphatest="blend" zPosition="1" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="224,685" size="12,24" alphatest="blend" zPosition="1" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_yellow.png" position="395,685" size="12,24" alphatest="blend" zPosition="1" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_blue.png" position="580,685" size="12,24" alphatest="blend" zPosition="1" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_info2.png" position="772,685" size="81,40" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_info2.png" position="970,685" size="30,30" alphatest="on" zPosition="1" />
     <widget name="key_red" position="59,685" size="150,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_green" position="248,685" size="150,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_yellow" position="420,685" size="150,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
@@ -574,7 +574,26 @@
     <widget source="global.CurrentTime" render="Label" position="710,9" size="320,25" font="Regular;20" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <ePixmap pixmap="Octagon-HD-Style-Dark/menu/Oktagon_shanelselection.png" position="0,0" size="1280,720" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" position="1110,685" size="30,30" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_exit.png" position="1040,685" size="30,30" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_ok.png" position="891,685" size="30,30" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/menu/Oktagon_shanelselection.png" position="0,0" size="1281,720" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/left.png" position="778,124" size="30,35" alphatest="blend" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/right.png" position="1174,124" size="30,35" alphatest="blend" />
+    <eLabel text="PREV" position="814,129" size="60,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="Next" position="1106,129" size="60,24" zPosition="1" font="Regular;20" halign="right" backgroundColor="metrixBackground" transparent="1" />
+  </screen>
+  <screen name="GraphMultiEpgSetup" backgroundColor="metrixBackground" position="50,60" size="900,650">
+    <eLabel text="Electronic Program Guide Setup" position="2,7" size="310,35" font="Regular; 24" backgroundColor="dark" transparent="1" />
+    <eLabel text="Setup" position="2,52" size="900,42" font="Regular; 25" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" itemHeight="34" font="Regular; 22" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" position="4,104" size="900,510" transparent="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="31,621" size="12,24" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="286,621" size="12,24" alphatest="blend" zPosition="1" />
+    <widget name="canceltext" render="Label" backgroundColor="white" font="Regular; 20" halign="left" position="51,621" size="180,25" transparent="1" zPosition="1" />
+    <widget name="oktext" render="Label" backgroundColor="metrixBackground" font="Regular; 20" halign="left" position="304,621" size="180,25" transparent="1" zPosition="1" />
+    <widget source="global.CurrentTime" render="Label" position="509,6" size="380,35" font="Regular; 24" halign="right" backgroundColor="metrixBackground" transparent="1">
+      <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
+    </widget>
   </screen>
   <screen name="Devices" position="50,59" size="780,650" title="SystemInfo" backgroundColor="metrixBackground">
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/icons/server.png" position="578,459" size="150,150" zPosition="2" transparent="1" alphatest="blend" />
@@ -1521,97 +1540,98 @@
     <ePixmap position="1185,685" size="81,40" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/right.png" transparent="1" alphatest="on" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="-1,0" size="1280,720" title="Eventview">
-    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_epgselection.png" />
-    <eLabel text="EventView" position="4,3" size="300,40" font="Regular; 30" halign="left" backgroundColor="metrixBackground" transparent="1" />
-    <widget source="session.Event_Now" render="Label" font="Regular; 32" position="669,54" size="90,50" zPosition="2" halign="left" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget name="channel" backgroundColor="metrixBackground" font="Regular; 32" noWrap="1" position="3,197" size="425,55" transparent="1" halign="center" />
-    <widget source="session.Event_Now" render="Label" font="Regular; 32" position="780,54" size="100,50" zPosition="2" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <eLabel backgroundColor="metrixBackground" font="Regular; 40" halign="center" noWrap="1" position="760,54" size="20,50" text="-" transparent="1" valign="center" />
-    <widget name="next" backgroundColor="metrixBackground" foregroundColor="meingruen" font="Regular; 32" halign="center" position="442,54" size="225,50" transparent="1" zPosition="10">
-    </widget>
-    <widget alphatest="blend" position="117,64" render="OE_XPiconOCT" size="220,132" source="Title" transparent="1" zPosition="5">
-      <convert type="RefStringOCT">CurrentRef</convert>
-    </widget>
-    <widget backgroundColor="metrixBackground" itemHeight="50" font="Regular; 28" name="epg_description" position="444,117" size="820,420" transparent="1" />
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_dolby_off.png" position="181,340" size="56,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_dolby_on.png" position="181,340" render="Pixmap" size="56,22" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_format_off.png" position="269,340" size="33,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_format_on.png" position="269,340" render="Pixmap" size="33,22" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt_off.png" position="123,340" size="26,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt_on.png" position="123,340" render="Pixmap" size="26,22" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_hd_off.png" position="326,340" size="42,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_hd_on.png" position="326,340" render="Pixmap" size="42,22" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_crypt_off.png" position="70,340" size="26,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_crypt_on.png" position="70,340" render="Pixmap" size="26,22" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_iptv_on.png" alphatest="blend" position="1155,678" zPosition="3" size="63,32" transparent="1">
-      <convert type="ServiceInfo">IsStream</convert>
-      <convert type="ConditionalShowHide">
-      </convert>
-    </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Dark/p_bar_sel.png" position="46,255" size="350,8" transparent="1" zPosition="1" borderWidth="1" borderColor="uncccccc">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget backgroundColor="metrixBackground" font="Regular; 28" halign="center" name="datetime" position="61,277" size="320,50" transparent="1" />
-    <widget backgroundColor="metrixBackground" font="Regular; 32" halign="left" name="duration" position="1104,54" size="160,50" transparent="1" />
-    <eLabel backgroundColor="metrixBackground" font="Regular; 28" halign="center" noWrap="1" position="1070,54" size="30,50" text="/" transparent="1" valign="center" />
-    <widget source="session.Event_Now" render="Label" position="906,54" size="160,50" transparent="1" zPosition="1" backgroundColor="metrixBackground" font="Regular; 32" halign="right">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="446,558" size="820,100" font="Regular; 28" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center">
-      <convert type="EventName">NameNext</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" font="Regular; 28" position="15,377" size="400,95" halign="center" zPosition="50" backgroundColor="metrixBackground" transparent="1" noWrap="1" valign="center" foregroundColor="cyan1">
-      <convert type="CryptoInfo">VerboseInfo</convert>
-    </widget>
-    <widget source="session.CurrentService" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" render="OE_RunningTextOCT" position="110,500" size="200,50" font="Regular; 28" zPosition="4" transparent="1" backgroundColor="metrixBackground" noWrap="1" halign="center" valign="center" foregroundColor="cyan1">
-      <convert type="ServiceNameOCT">%s / %O / %F %p %Y %f</convert>
-    </widget>
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/left.png" position="19,275" size="36,36" transparent="1" zPosition="10" />
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/right.png" position="385,275" size="36,36" transparent="1" zPosition="10" />
-    <!-- Button -->
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/buttons/key_red.png" position="14,682" size="40,40" />
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/buttons/key_green.png" position="298,682" size="40,40" />
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/buttons/key_yellow.png" position="581,682" size="40,40" />
-    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/buttons/key_blue.png" position="864,682" size="40,40" />
-    <widget backgroundColor="metrixBackground" font="Regular; 28" halign="left" position="56,681" size="240,40" name="key_red" transparent="1" zPosition="1" />
-    <widget backgroundColor="metrixBackground" font="Regular; 28" halign="left" position="341,681" size="240,40" name="key_green" transparent="1" zPosition="1" />
-    <widget backgroundColor="metrixBackground" font="Regular; 28" halign="left" position="623,681" size="240,40" name="key_yellow" transparent="1" zPosition="1" />
-    <widget backgroundColor="metrixBackground" font="Regular; 28" halign="left" position="904,681" size="240,40" name="key_blue" transparent="1" zPosition="1" />
-    <!-- Clock -->
-    <widget backgroundColor="metrixBackground" font="Regular; 65" halign="center" position="203,582" render="Label" size="200,90" source="global.CurrentTime" transparent="1" valign="center">
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget backgroundColor="metrixBackground" font="Regular; 26" halign="right" position="22,623" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
-      <convert type="ClockToText">Format:%e. %b</convert>
-    </widget>
-    <widget backgroundColor="metrixBackground" font="Regular; 26" halign="right" position="22,587" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
-      <convert type="ClockToText">Format:%A</convert>
-    </widget>
-  </screen>
-  <screen name="GraphMultiEPGList" title="Electronic Program Guide" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_epgselection.png" />
+  <eLabel text="EventView" position="4,3" size="300,40" font="Regular; 30" halign="left" backgroundColor="metrixBackground" transparent="1" />
+  <widget source="session.Event_Now" render="Label" font="Regular; 32" position="669,54" size="90,50" zPosition="2" halign="left" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget name="channel" backgroundColor="metrixBackground" font="Regular; 32" noWrap="1" position="3,197" size="425,55" transparent="1" halign="center" />
+  <widget source="session.Event_Now" render="Label" font="Regular; 32" position="780,54" size="100,50" zPosition="2" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" font="Regular; 40" halign="center" noWrap="1" position="760,54" size="20,50" text="-" transparent="1" valign="center" />
+  <widget name="next" backgroundColor="metrixBackground" foregroundColor="meingruen" font="Regular; 32" halign="center" position="442,54" size="225,50" transparent="1" zPosition="10">
+  </widget>
+  <widget alphatest="blend" position="117,64" render="OE_XPiconOCT" size="220,132" source="Title" transparent="1" zPosition="5">
+    <convert type="RefStringOCT">CurrentRef</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" itemHeight="50" font="Regular; 28" name="epg_description" position="444,117" size="820,420" transparent="1" />
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_dolby_off.png" position="181,340" size="56,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_dolby_on.png" position="181,340" render="Pixmap" size="56,22" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_format_off.png" position="269,340" size="33,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_format_on.png" position="269,340" render="Pixmap" size="33,22" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt_off.png" position="123,340" size="26,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_txt_on.png" position="123,340" render="Pixmap" size="26,22" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_hd_off.png" position="326,340" size="42,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_hd_on.png" position="326,340" render="Pixmap" size="42,22" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_crypt_off.png" position="70,340" size="26,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_crypt_on.png" position="70,340" render="Pixmap" size="26,22" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Octagon-HD-Style-Dark/skin_default/icons/ico_iptv_on.png" alphatest="blend" position="901,681" zPosition="3" size="63,32" transparent="1">
+    <convert type="ServiceInfo">IsStream</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" pixmap="Octagon-HD-Style-Dark/p_bar_sel.png" position="46,255" size="350,8" transparent="1" zPosition="1" borderWidth="1" borderColor="uncccccc">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 28" halign="center" name="datetime" position="61,277" size="320,50" transparent="1" />
+  <widget backgroundColor="metrixBackground" font="Regular; 32" halign="left" name="duration" position="1104,54" size="160,50" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" font="Regular; 28" halign="center" noWrap="1" position="1070,54" size="30,50" text="/" transparent="1" valign="center" />
+  <widget source="session.Event_Now" render="Label" position="906,54" size="160,50" transparent="1" zPosition="1" backgroundColor="metrixBackground" font="Regular; 32" halign="right">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="446,558" size="820,100" font="Regular; 28" halign="center" backgroundColor="metrixBackground" transparent="1" valign="center">
+    <convert type="EventName">NameNext</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular; 28" position="15,377" size="400,95" halign="center" zPosition="50" backgroundColor="metrixBackground" transparent="1" noWrap="1" valign="center" foregroundColor="cyan1">
+    <convert type="CryptoInfo">VerboseInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" render="OE_RunningTextOCT" position="110,500" size="200,50" font="Regular; 28" zPosition="4" transparent="1" backgroundColor="metrixBackground" noWrap="1" halign="center" valign="center" foregroundColor="cyan1">
+    <convert type="ServiceNameOCT">%s / %O / %F %p %Y %f</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/left.png" position="19,275" size="36,36" transparent="1" zPosition="10" />
+  <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/right.png" position="385,275" size="36,36" transparent="1" zPosition="10" />
+  <!-- Button -->
+   <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="31,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="225,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_yellow.png" position="420,685" size="12,24" alphatest="blend" />
+  <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_blue.png" position="614,685" size="12,24" alphatest="blend" />
+  <widget name="key_red" position="65,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="key_green" position="260,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="key_yellow" position="455,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+  <widget name="key_blue" position="650,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
+  <ePixmap position="838,683" size="31,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
+  <!-- Clock -->
+  <widget backgroundColor="metrixBackground" font="Regular; 65" halign="center" position="203,582" render="Label" size="200,90" source="global.CurrentTime" transparent="1" valign="center">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 26" halign="right" position="22,623" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 26" halign="right" position="22,587" render="Label" size="175,35" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+</screen>
+  <screen name="GraphMultiEPGList" title="Electronic Program Guide" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="metrixBackground">
     <eLabel text="Electronic Program Guide" position="1,-6" size="500,50" font="Regular; 32" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="710,9" size="320,25" font="Regular;20" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -1619,25 +1639,24 @@
     <widget source="global.CurrentTime" render="Label" position="1178,8" size="100,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="Event" render="Label" position="20,60" size="800,39" font="Regular; 24" backgroundColor="metrixBackground" transparent="1">
+    <widget source="Event" render="Label" position="141,64" size="800,39" font="Regular; 24" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="Label" position="20,115" size="65,22" font="Regular; 18" halign="center" backgroundColor="metrixBackground" transparent="1">
+    <widget source="Event" render="Label" position="136,112" size="65,22" font="Regular; 18" halign="center" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Format:%H:%M </convert>
     </widget>
-    <widget source="Event" render="Label" position="795,116" size="65,22" font="Regular; 18" backgroundColor="metrixBackground" transparent="1" halign="center">
+    <widget source="Event" render="Label" position="872,112" size="65,22" font="Regular; 18" backgroundColor="metrixBackground" transparent="1" halign="center">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <eLabel position="90,125" size="690,1" backgroundColor="grey" />
-    <widget source="Event" render="Progress" position="91,122" size="691,5" borderWidth="0" pixmap="Octagon-HD-Style-Dark/colors/00c10900.png" zPosition="1" transparent="1">
+    <eLabel position="210,125" size="648,1" backgroundColor="grey" />
+    <widget source="Event" render="Progress" position="209,123" size="651,5" borderWidth="0" pixmap="Octagon-HD-Style-Dark/colors/00c10900.png" zPosition="1" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget name="lab1" position="20,265" size="1240,395" halign="center" valign="center" zPosition="20" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="timeline_text" position="20,220" size="1240,25" selectionDisabled="1" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="list" position="20,265" size="1240,395" itemHeight="60" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="timeline_now" position="30,252" zPosition="2" size="13,418" pixmap="Octagon-HD-Style-Dark/timeline-now2.png" alphatest="blend" />
+    <widget name="timeline_text" position="15,141" size="1240,28" selectionDisabled="1" transparent="1" backgroundColor="metrixBackground" />
+    <widget name="list" position="16,182" size="1240,465" itemHeight="60" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="timeline_now" position="30,165" zPosition="2" size="13,490" pixmap="Octagon-HD-Style-Dark/timeline-now.png" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="30,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="225,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_yellow.png" position="420,685" size="12,24" alphatest="blend" />
@@ -1646,19 +1665,19 @@
     <widget name="key_green" position="260,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_yellow" position="455,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_blue" position="650,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
-    <ePixmap position="1001,685" size="81,40" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
-    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_EPG.png" />
-    <widget position="999,67" size="250,141" render="OE_XPiconOCT" source="session.CurrentService" alphatest="blend" zPosition="1">
+    <ePixmap position="1001,685" size="31,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
+    <ePixmap position="1,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_EPG.png" />
+    <widget source="Service" render="OE_XPiconOCT" position="17,66" size="110,66" transparent="1" zPosition="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <ePixmap position="921,685" size="30,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_info.png" transparent="1" alphatest="blend" />
     <ePixmap position="840,685" size="30,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
   </screen>
-  <screen name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="metrixBackground">
     <widget source="global.CurrentTime" render="Label" position="710,9" size="320,25" font="Regular;20" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget backgroundColor="metrixBackground" font="Regular; 20" halign="left" position="22,78" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="OE_RunningTextOCT" size="1240,140" source="Event" transparent="1" valign="top">
+    <widget backgroundColor="metrixBackground" font="Regular; 20" halign="left" position="21,57" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="OE_RunningTextOCT" size="800,160" source="Event" transparent="1" valign="top">
       <convert type="EventName">FullDescription</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="1178,8" size="100,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
@@ -1667,21 +1686,25 @@
     <widget source="Event" render="Label" position="16,3" size="700,39" font="Regular; 24" backgroundColor="metrixBackground" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="Label" position="18,53" size="65,22" font="Regular; 18" halign="center" backgroundColor="metrixBackground" transparent="1">
+    <widget source="Event" render="Label" position="1081,76" size="82,26" font="Regular; 24" backgroundColor="metrixBackground" transparent="1" halign="right" valign="top">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M </convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="Event" render="Label" position="841,53" size="65,22" font="Regular; 18" backgroundColor="metrixBackground" transparent="1" halign="center">
+    <widget source="Event" render="Label" position="1181,76" size="82,26" font="Regular; 24" backgroundColor="metrixBackground" transparent="1" valign="top">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <eLabel position="91,61" size="740,1" backgroundColor="grey" />
-    <widget source="Event" render="Progress" position="91,59" size="740,5" borderWidth="0" pixmap="Octagon-HD-Style-Dark/colors/00c10900.png" zPosition="1" transparent="1">
+    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/left.png" position="1094,155" size="36,36" transparent="1" zPosition="10" />
+    <ePixmap alphatest="blend" pixmap="Octagon-HD-Style-Dark/right.png" position="1208,155" size="36,36" transparent="1" zPosition="10" />
+    <widget source="Service" render="OE_XPiconOCT" position="843,70" size="220,132" transparent="1" zPosition="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="Event" render="Progress" pixmap="Octagon-HD-Style-Dark/p_bar_sel.png" position="1094,127" size="152,8" transparent="1" zPosition="1" borderWidth="1" borderColor="uncccccc">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget name="lab1" position="20,249" size="1240,395" halign="center" valign="center" zPosition="20" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="timeline_text" position="20,226" size="1240,25" selectionDisabled="1" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="list" position="20,260" size="1240,395" itemHeight="60" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1" />
+    <eLabel text="-" position="1162,76" size="18,26" font="Regular; 24" halign="center" transparent="1" valign="center" />
+    <widget name="timeline_text" position="20,226" size="1240,25" selectionDisabled="1" transparent="1" backgroundColor="metrixBackground" />
+    <widget name="list" position="20,261" size="1240,395" itemHeight="60" EntryBorderColor="metrixBackground" EntryBackgroundColor="black" EntryBackgroundColorSelected="black" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline_now" position="30,247" zPosition="2" size="13,418" pixmap="Octagon-HD-Style-Dark/timeline-now2.png" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="31,685" size="12,24" alphatest="blend" />
     <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="225,685" size="12,24" alphatest="blend" />
@@ -1691,10 +1714,10 @@
     <widget name="key_green" position="260,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_yellow" position="455,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget name="key_blue" position="650,685" size="160,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
-    <ePixmap position="998,685" size="81,40" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
-    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_EPG.png" />
+    <ePixmap position="998,685" size="31,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" transparent="1" alphatest="on" />
+    <ePixmap position="0,1" zPosition="-1" size="1280,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_EPG.png" />
     <ePixmap position="921,685" size="30,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_info.png" transparent="1" alphatest="blend" />
-    <ePixmap position="840,685" size="30,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1154,158" size="30,30" zPosition="10" pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="MovieEpgSetup" position="50,0" size="800,720" title="MovieEpg Setup" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Title" render="Label" position="10,0" size="700,40" font="Regular; 28" backgroundColor="metrixBackground" transparent="1" />
@@ -1722,34 +1745,6 @@
     <widget name="key_green" position="333,125" zPosition="1" size="130,25" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="top" />
     <widget name="key_yellow" position="603,125" zPosition="1" size="130,25" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" valign="top" />
     <widget name="key_blue" position="883,125" zPosition="1" size="130,25" font="Regular; 20" backgroundColor="metrixBackground" transparent="1" halign="left" valign="top" />
-  </screen>
-  <screen name="GraphicalInfoBarEPG" title="InfoBar" position="50,450" size="1180,221" backgroundColor="metrixBackground">
-    <widget source="global.CurrentTime" render="Label" position="829,2" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
-      <convert type="ClockToText">Format:%A, %d. %m. %Y    %H : %M</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="2,2" size="850,45" font="Regular; 35" valign="top" noWrap="1" backgroundColor="metrixBackground" transparent="1">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget name="lab1" position="0,55" size="1180,115" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="metrixBackground" transparent="1" />
-    <widget name="timeline_text" position="-1,54" size="1180,30" foregroundColor="white" font="Regular; 20" transparent="1" zPosition="-1" />
-    <widget name="list" position="0,85" size="1180,85" backgroundColor="metrixBackground" scrollbarMode="showNever" zPosition="1" EntryFontWrap="no" transparent="1" />
-    <widget name="timeline_now" position="0,72" zPosition="2" size="19,99" pixmap="Octagon-HD-Style-Dark/timeline-now.png" alphatest="on" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_red.png" position="10,189" size="30,38" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_green.png" position="255,189" size="30,38" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_yellow.png" position="505,189" size="30,38" alphatest="blend" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_blue.png" position="750,189" size="30,38" alphatest="blend" />
-    <widget name="key_red" position="45,189" size="220,26" backgroundColor="metrixBackground" transparent="1" zPosition="1" font="Regular;20" halign="left" />
-    <widget name="key_green" position="290,189" size="220,26" backgroundColor="metrixBackground" transparent="1" zPosition="1" font="Regular;20" halign="left" />
-    <widget name="key_yellow" position="539,189" size="220,26" backgroundColor="metrixBackground" transparent="1" zPosition="1" font="Regular;20" halign="left" />
-    <widget name="key_blue" position="785,189" size="220,26" backgroundColor="metrixBackground" transparent="1" zPosition="1" font="Regular;20" halign="left" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_menu.png" alphatest="on" position="1009,189" size="81,40" />
-    <ePixmap pixmap="Octagon-HD-Style-Dark/skin_default/buttons/key_info2.png" alphatest="on" position="1095,189" size="81,40" />
-  </screen>
-  <screen name="InfoBarEventView" position="50,175" size="1180,420" backgroundColor="metrixBackground">
-    <widget name="channel" position="2,2" size="850,43" font="Regular;32" transparent="1" foregroundColor="white" backgroundColor="metrixBackground" zPosition="2" />
-    <widget name="datetime" position="920,0" size="250,26" font="Regular;26" foregroundColor="white" backgroundColor="metrixBackground" transparent="1" noWrap="1" valign="top" halign="right" zPosition="2" />
-    <widget name="duration" position="1017,30" size="150,26" font="Regular;26" foregroundColor="white" backgroundColor="metrixBackground" transparent="1" noWrap="1" valign="top" halign="right" zPosition="2" />
-    <widget name="epg_description" position="1,72" size="1180,344" font="Regular; 25" scrollbarMode="showNever" foregroundColor="white" backgroundColor="metrixBackground" transparent="1" zPosition="2" />
   </screen>
   <screen name="genuineDreambox" position="50,0" size="800,720" title="Genuine Dreambox" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="global.CurrentTime" render="Label" position="424,63" size="350,25" font="Regular; 20" halign="right" backgroundColor="metrixBackground" transparent="1">
@@ -2439,14 +2434,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <ePixmap position="0,0" zPosition="-1" size="800,720" pixmap="Octagon-HD-Style-Dark/menu/Oktagon_menu.png" />
   </screen>
   <screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="global.CurrentTime" render="Label" position="192,586" size="170,65" font="Regular; 55" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+    <widget source="global.CurrentTime" render="Label" position="286,593" size="170,65" font="Regular; 55" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
       <convert type="ClockToText">Default</convert>
     </widget>
     <eLabel text="Für die Wetteranzeige in der 2.Infobar, bitte den Weather Component Handler von SystemPlugins installieren und aktivieren" position="16,470" size="700,90" zPosition="2" font="Regular; 22" transparent="1" backgroundColor="metrixBackground" halign="left" foregroundColor="cyan1" />
-    <widget source="global.CurrentTime" render="Label" position="44,622" size="148,29" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="136,623" size="148,29" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
       <convert type="ClockToText">Format:%d. %B</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="67,590" size="125,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="10,622" size="125,30" font="Regular; 20" halign="right" backgroundColor="metrixBackground" foregroundColor="white" transparent="1">
       <convert type="ClockToText">Format:%A</convert>
     </widget>
     <eLabel text="Choose your Skin" position="10,0" size="273,40" font="Regular; 28" backgroundColor="metrixBackground" transparent="1" foregroundColor="white" valign="top" zPosition="0" />
@@ -2817,7 +2812,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="key_yellow" render="Label" position="380,552" size="160,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="metrixBackground" transparent="1" />
     <widget source="key_blue" render="Label" position="558,552" size="160,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="metrixBackground" transparent="1" />
   </screen>
-  <screen name="VirtualKeyBoard" position="50,90" size="700,480" zPosition="99" title="Virtual KeyBoard">
+  <screen name="VirtualKeyBoard" position="291,220" size="700,480" zPosition="99" title="Virtual KeyBoard">
     <widget source="global.CurrentTime" render="Label" position="598,2" size="100,28" font="Regular;26" halign="right" backgroundColor="metrixBackground" transparent="1">
       <convert type="ClockToText">Default</convert>
     </widget>
