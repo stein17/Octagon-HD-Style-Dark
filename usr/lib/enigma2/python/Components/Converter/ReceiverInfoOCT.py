@@ -82,13 +82,13 @@ class ReceiverInfoOCT(Poll, Converter):
             elif self.shortFormat:
                 text = '%s: %s, im Einsatz: %s%%' % (entry[1], self.getSizeStr(list[0]), list[3])
             elif self.fullFormat:
-                text = '%s: %s Frei:%s Verwendet:%s (%s%%)' % (entry[1],
+                text = '%s: %s  Frei: %s  Verwendet: %s (%s%%)' % (entry[1],
                  self.getSizeStr(list[0]),
                  self.getSizeStr(list[2]),
                  self.getSizeStr(list[1]),
                  list[3])
             else:
-                text = '%s: %s Verwendet:%s Frei:%s' % (entry[1],
+                text = '%s: %s  Verwendet: %s  Frei: %s' % (entry[1],
                  self.getSizeStr(list[0]),
                  self.getSizeStr(list[1]),
                  self.getSizeStr(list[2]))
