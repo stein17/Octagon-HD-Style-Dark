@@ -8,7 +8,7 @@ from time import localtime, strftime, time, gmtime, asctime
 from Components.Sources.Clock import Clock
 
 
-class OCTServiceEndTime(Poll, Converter, object):
+class ServiceEndTimeOCT(Poll, Converter, object):
 	TYPE_ENDTIME = 0
 
 	def __init__(self, type):
